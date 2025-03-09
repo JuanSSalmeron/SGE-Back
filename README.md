@@ -106,7 +106,7 @@ Conoce al equipo que dio vida a este proyecto:
    }
    ```
 
-5. Aplica las migraciones (si usas EF Core):
+5. Aplica las migraciones:
 
    ```bash
    dotnet ef database update
@@ -114,7 +114,7 @@ Conoce al equipo que dio vida a este proyecto:
 
 6. ¡Corre el proyecto y a disfrutar!
    ```bash
-   dotnet run --project src/Presentation/SGE.Presentation.csproj
+   dotnet run --project Backend-Base\Base.API.csproj
    ```
 
 ---
