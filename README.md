@@ -161,7 +161,7 @@ Bajo la **Licencia MIT** - ¡úsalo como quieras!
 
 ## 📧 Contacto
 
-¿Dudas? Escribe al líder del equipo:
+¿Dudas? Escribe al arquitecto backend del equipo:
 
 **Francisco Emmanuel Rojas Cerón**  
 Email: [erojas@ozelot.it](mailto:erojas@ozelot.it)
