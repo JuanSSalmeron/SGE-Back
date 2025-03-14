@@ -1,5 +1,6 @@
 ﻿using Base.Domain.Entidades.Personas;
 using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 using static Base.Common.Enumeraciones.Enums;
 
 namespace Base.Domain.Entidades.Seguridad
@@ -16,8 +17,9 @@ namespace Base.Domain.Entidades.Seguridad
         public string RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryTime { get; set; }
 
-        //Relaciones
-        public virtual Persona persona { get; set; }
+        [ForeignKey(nameof(Persona))]
+        public int IdPersona { get; set; }
+        public virtual PersonaEntity Persona { get; set; }
     }
 
 }
