@@ -8,5 +8,10 @@ namespace Base.Common.Enumeraciones
         {
             [Display(Name = "Activo")] ACTIVO, INACTIVO
         }
+
+        public enum EstatusPeriodo
+        {
+            EN_ESPERA, ACTIVO, FINALIZADO
+        }
     }
 }

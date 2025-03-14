@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Base.Domain.Entidades.Escuela;
 
 namespace Base.Domain.Entidades.Core
 {
