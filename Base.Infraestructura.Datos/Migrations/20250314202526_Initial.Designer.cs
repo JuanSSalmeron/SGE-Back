@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Base.Infraestructura.Data.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20250314170615_Initial")]
+    [Migration("20250314202526_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -177,7 +177,7 @@ namespace Base.Infraestructura.Data.Migrations
 
                     b.HasIndex("IdMateria");
 
-                    b.ToTable("MateriaGrupoEntity");
+                    b.ToTable("Tbl_MateriasGrupos");
                 });
 
             modelBuilder.Entity("Base.Domain.Entidades.Clases.MateriasEntity", b =>

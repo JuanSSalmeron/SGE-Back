@@ -127,7 +127,7 @@ namespace Base.Infraestructura.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MateriaGrupoEntity",
+                name: "Tbl_MateriasGrupos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -140,15 +140,15 @@ namespace Base.Infraestructura.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MateriaGrupoEntity", x => x.Id);
+                    table.PrimaryKey("PK_Tbl_MateriasGrupos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MateriaGrupoEntity_Tbl_Grupos_IdGrupo",
+                        name: "FK_Tbl_MateriasGrupos_Tbl_Grupos_IdGrupo",
                         column: x => x.IdGrupo,
                         principalTable: "Tbl_Grupos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MateriaGrupoEntity_Tbl_Materias_IdMateria",
+                        name: "FK_Tbl_MateriasGrupos_Tbl_Materias_IdMateria",
                         column: x => x.IdMateria,
                         principalTable: "Tbl_Materias",
                         principalColumn: "Id",
@@ -516,16 +516,6 @@ namespace Base.Infraestructura.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MateriaGrupoEntity_IdGrupo",
-                table: "MateriaGrupoEntity",
-                column: "IdGrupo");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_MateriaGrupoEntity_IdMateria",
-                table: "MateriaGrupoEntity",
-                column: "IdMateria");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Tbl_Alumnos_IdCursoEscolar",
                 table: "Tbl_Alumnos",
                 column: "IdCursoEscolar");
@@ -576,6 +566,16 @@ namespace Base.Infraestructura.Data.Migrations
                 column: "IdPeriodo");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Tbl_MateriasGrupos_IdGrupo",
+                table: "Tbl_MateriasGrupos",
+                column: "IdGrupo");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tbl_MateriasGrupos_IdMateria",
+                table: "Tbl_MateriasGrupos",
+                column: "IdMateria");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Tbl_Profesores_IdPersona",
                 table: "Tbl_Profesores",
                 column: "IdPersona");
@@ -605,9 +605,6 @@ namespace Base.Infraestructura.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "MateriaGrupoEntity");
-
-            migrationBuilder.DropTable(
                 name: "Tbl_Calificaciones");
 
             migrationBuilder.DropTable(
@@ -618,6 +615,9 @@ namespace Base.Infraestructura.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Tbl_GruposPeriodos");
+
+            migrationBuilder.DropTable(
+                name: "Tbl_MateriasGrupos");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -635,10 +635,10 @@ namespace Base.Infraestructura.Data.Migrations
                 name: "Tbl_Alumnos");
 
             migrationBuilder.DropTable(
-                name: "Tbl_Grupos");
+                name: "Tbl_Periodos");
 
             migrationBuilder.DropTable(
-                name: "Tbl_Periodos");
+                name: "Tbl_Grupos");
 
             migrationBuilder.DropTable(
                 name: "Tbl_Materias");
