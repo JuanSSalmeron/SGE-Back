@@ -174,7 +174,7 @@ namespace Base.Infraestructura.Data.Migrations
 
                     b.HasIndex("IdMateria");
 
-                    b.ToTable("MateriaGrupoEntity");
+                    b.ToTable("Tbl_MateriasGrupos");
                 });
 
             modelBuilder.Entity("Base.Domain.Entidades.Clases.MateriasEntity", b =>
