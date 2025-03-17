@@ -1,4 +1,5 @@
-﻿using Base.Domain.Entidades.Core;
+﻿using Base.Domain.DTOs.Escuela;
+using Base.Domain.Entidades.Core;
 using Base.Domain.Entidades.Escuela;
 using System.ComponentModel.DataAnnotations.Schema;
 

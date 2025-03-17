@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Base.Domain.Entidades.Clases
 {
+    [Table("Tbl_MateriasGrupos")]
     public class MateriaGrupoEntity : NombreEntity
     {
         [ForeignKey(nameof(Materia))]
