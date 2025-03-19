@@ -440,7 +440,7 @@ namespace Base.Infraestructura.Data.Migrations
                     b.Property<int>("EstatusUsuario")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdPersona")
+                    b.Property<int?>("IdPersona")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
@@ -779,9 +779,7 @@ namespace Base.Infraestructura.Data.Migrations
                 {
                     b.HasOne("Base.Domain.Entidades.Personas.PersonaEntity", "Persona")
                         .WithMany()
-                        .HasForeignKey("IdPersona")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdPersona");
 
                     b.Navigation("Persona");
                 });

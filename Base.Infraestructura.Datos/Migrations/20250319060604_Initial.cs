@@ -217,7 +217,7 @@ namespace Base.Infraestructura.Data.Migrations
                     EstatusUsuario = table.Column<int>(type: "int", nullable: false),
                     RefreshToken = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     RefreshTokenExpiryTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    IdPersona = table.Column<int>(type: "int", nullable: false),
+                    IdPersona = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -240,8 +240,7 @@ namespace Base.Infraestructura.Data.Migrations
                         name: "FK_AspNetUsers_Tbl_Personas_IdPersona",
                         column: x => x.IdPersona,
                         principalTable: "Tbl_Personas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
