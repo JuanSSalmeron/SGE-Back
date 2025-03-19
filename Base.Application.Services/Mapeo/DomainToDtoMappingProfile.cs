@@ -17,23 +17,23 @@ namespace Base.Application.Services.Mapeo
             this.CreateMap<BaseEntity, BaseDTO>();
 
             // Mapeo de Personas.
-            this.CreateMap<AlumnoEntity, AlumnoEntityDTO>();
-            this.CreateMap<PersonaEntity, PersonaEntityDTO>();
-            this.CreateMap<ProfesorEntity, ProfesorEntityDTO>();
+            this.CreateMap<AlumnoEntity, AlumnoEntityDTO>().ReverseMap();
+            this.CreateMap<PersonaEntity, PersonaEntityDTO>().ReverseMap();
+            this.CreateMap<ProfesorEntity, ProfesorEntityDTO>().ReverseMap();
 
             // Mapeo de Escuela.
-            this.CreateMap<CursoEscolarEntity, CursoEscolarEntityDTO>();
-            this.CreateMap<CalificacionesEntity, CalificacionesEntityDTO>();
-            this.CreateMap<PeriodosEntity, PeriodosEntityDTO>();
+            this.CreateMap<CursoEscolarEntity, CursoEscolarEntityDTO>().ReverseMap();
+            this.CreateMap<CalificacionesEntity, CalificacionesEntityDTO>().ReverseMap();
+            this.CreateMap<PeriodosEntity, PeriodosEntityDTO>().ReverseMap();
 
             // Mapeo de Clases.
-            this.CreateMap<ClasesEntity, ClasesEntityDTO>();
-            this.CreateMap<GruposAlumnosEntity, GruposAlumnosEntityDTO>();
-            this.CreateMap<GruposEntity, GruposEntityDTO>();
-            this.CreateMap<GruposPeriodosEntity, GruposPeriodosEntityDTO>();
-            this.CreateMap<MateriaGrupoEntity, MateriaGrupoEntityDTO>();
-            this.CreateMap<MateriasEntity, MateriasEntityDTO>();
-            this.CreateMap<UnidadesEntity, UnidadesEntityDTO>();
+            this.CreateMap<ClasesEntity, ClasesEntityDTO>().ReverseMap();
+            this.CreateMap<GruposAlumnosEntity, GruposAlumnosEntityDTO>().ReverseMap();
+            this.CreateMap<GruposEntity, GruposEntityDTO>().ReverseMap();
+            this.CreateMap<GruposPeriodosEntity, GruposPeriodosEntityDTO>().ReverseMap();
+            this.CreateMap<MateriaGrupoEntity, MateriaGrupoEntityDTO>().ReverseMap();
+            this.CreateMap<MateriasEntity, MateriasEntityDTO>().ReverseMap();
+            this.CreateMap<UnidadesEntity, UnidadesEntityDTO>().ReverseMap();
         }
     }
 }

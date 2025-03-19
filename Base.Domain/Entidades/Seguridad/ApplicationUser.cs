@@ -18,8 +18,8 @@ namespace Base.Domain.Entidades.Seguridad
         public DateTime? RefreshTokenExpiryTime { get; set; }
 
         [ForeignKey(nameof(Persona))]
-        public int IdPersona { get; set; }
-        public virtual PersonaEntity Persona { get; set; }
+        public int? IdPersona { get; set; }
+        public virtual PersonaEntity? Persona { get; set; }
     }
 
 }

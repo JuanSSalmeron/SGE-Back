@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Base.Infraestructura.Data.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20250314202526_Initial")]
+    [Migration("20250319060604_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -443,7 +443,7 @@ namespace Base.Infraestructura.Data.Migrations
                     b.Property<int>("EstatusUsuario")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdPersona")
+                    b.Property<int?>("IdPersona")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
@@ -782,9 +782,7 @@ namespace Base.Infraestructura.Data.Migrations
                 {
                     b.HasOne("Base.Domain.Entidades.Personas.PersonaEntity", "Persona")
                         .WithMany()
-                        .HasForeignKey("IdPersona")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdPersona");
 
                     b.Navigation("Persona");
                 });
