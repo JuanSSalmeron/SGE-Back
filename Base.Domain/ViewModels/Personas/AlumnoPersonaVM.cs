@@ -14,5 +14,9 @@ namespace Base.Domain.ViewModels.Personas
         public int Matricula { get; set; }
         public bool Estado { get; set; }
         public string CursoEscolar { get; set; }
+        public int IdPersona { get; set; }
+        public int IdCursoEscolar { get; set; }
+        public string NecesidadesEspeciales { get; set; }
+        public string ContactoEmergencia { get; set; }
     }
 }
