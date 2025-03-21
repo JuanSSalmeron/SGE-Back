@@ -41,7 +41,11 @@ namespace Base.Application.Services.Interfaces.Implementacion.Personas
                         CursoEscolar = cursoEscolarAlumno.Nombre,
                         Estado = alumno.EsBorrado,
                         FechaIngreso = alumno.FechaIngreso,
-                        Matricula = alumno.Matricula
+                        Matricula = alumno.Matricula,
+                        IdPersona = alumno.IdPersona,
+                        IdCursoEscolar = alumno.IdCursoEscolar,
+                        NecesidadesEspeciales = alumno.NecesidadesEspeciales,
+                        ContactoEmergencia = alumno.ContactoEmergencia,
                     });
                 }
 
@@ -81,7 +85,11 @@ namespace Base.Application.Services.Interfaces.Implementacion.Personas
                         CursoEscolar = cursoEscolarAlumno.Nombre,
                         Estado = alumno.EsBorrado,
                         FechaIngreso = alumno.FechaIngreso,
-                        Matricula = alumno.Matricula
+                        Matricula = alumno.Matricula,
+                        IdPersona = alumno.IdPersona,
+                        IdCursoEscolar = alumno.IdCursoEscolar,
+                        NecesidadesEspeciales = alumno.NecesidadesEspeciales,
+                        ContactoEmergencia = alumno.ContactoEmergencia,
                     };
                 }
 
